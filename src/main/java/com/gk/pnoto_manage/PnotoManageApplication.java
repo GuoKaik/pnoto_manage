@@ -9,5 +9,4 @@ public class PnotoManageApplication {
     public static void main(String[] args) {
         SpringApplication.run(PnotoManageApplication.class, args);
     }
-aaa
 }
