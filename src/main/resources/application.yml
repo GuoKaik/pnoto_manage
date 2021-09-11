@@ -1,2 +1,16 @@
 server:
   port: 8090
+#配置数据源
+spring:
+  datasource:
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/photo_manage?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: tiger
+  # MyBatis
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
+
+logging:
+  level:
+    com.gk.pnoto_manage.user.userDao.UserDao : DEBUG
