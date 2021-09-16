@@ -15,9 +15,14 @@ import com.gk.pnoto_manage.domain.User;
 import com.gk.pnoto_manage.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+
 @Controller
 //@RequestMapping("/")
 public class UserController {
@@ -30,5 +35,10 @@ public class UserController {
         userService.login(user);
         System.out.println("1111");
         return "111";
+    }
+    @RequestMapping("/")
+    public String index(Model model, HttpServletResponse response){
+        //model.addAttribute("","");
+        return "index";
     }
 }
